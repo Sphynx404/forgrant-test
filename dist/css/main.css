@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  outline: 0; }
+
+body {
+  font: 16px 'Roboto', sans-serif;
+  background: url(../img/bg.jpg) no-repeat 50% 0/cover;
+  min-height: 100vh;
+  color: #ffffff; }
+
+.container {
+  width: 984px;
+  margin: 0 auto;
+  position: relative; }
+  @media only screen and (max-width: 991px) {
+    .container {
+      width: 720px; } }
+  @media only screen and (max-width: 767px) {
+    .container {
+      width: 610px; } }
+  @media only screen and (max-width: 639px) {
+    .container {
+      width: 100%; } }
+
+.is-rise {
+  color: #70c446 !important; }
+
+.is-fall {
+  color: #c80e24 !important; }
+
+.exchange {
+  padding-top: 70px;
+  margin-bottom: 50px; }
+
+.exchange-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(148, 232, 254, 0.1);
+  border-radius: 10px; }
+  @media only screen and (max-width: 559px) {
+    .exchange-container {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  .exchange-container h1 {
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0; }
+    @media only screen and (max-width: 559px) {
+      .exchange-container h1 {
+        -webkit-box-flex: initial;
+            -ms-flex: initial;
+                flex: initial;
+        margin-bottom: 25px; } }
+  .exchange-container .custom-select {
+    width: 300px;
+    border: 1px solid #92e8fe;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    cursor: pointer; }
+    @media only screen and (max-width: 991px) {
+      .exchange-container .custom-select {
+        width: 200px; } }
+    .exchange-container .custom-select .custom-select-trigger {
+      padding: 20px 25px 20px 15px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .exchange-container .custom-select .custom-select-trigger::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-bottom: 1px solid #92e8fe;
+        border-right: 1px solid #92e8fe;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        position: absolute;
+        right: 15px; }
+    .exchange-container .custom-select .custom-options {
+      width: 100%;
+      position: absolute;
+      border: inherit;
+      padding: 20px 15px;
+      border-radius: inherit;
+      left: 0;
+      top: 100%;
+      margin-top: 10px;
+      z-index: 100;
+      background: #1e252b;
+      display: none; }
+      .exchange-container .custom-select .custom-options li.is-selected {
+        display: none; }
+      .exchange-container .custom-select .custom-options li:hover {
+        font-weight: 700; }
+      .exchange-container .custom-select .custom-options li + li {
+        margin-top: 10px; }
+    .exchange-container .custom-select.is-visible .custom-options {
+      display: block; }
+
+.coins-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  @media only screen and (max-width: 767px) {
+    .coins-container {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
+  .coins-container .coin {
+    width: 310px;
+    padding: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 700; }
+    @media only screen and (max-width: 991px) {
+      .coins-container .coin {
+        width: 230px; } }
+    @media only screen and (max-width: 767px) {
+      .coins-container .coin {
+        width: 270px;
+        margin-bottom: 25px; } }
+    .coins-container .coin .coin-name {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 150px; }
+    .coins-container .coin .coin-price {
+      font-size: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-bottom: 10px; }
+      .coins-container .coin .coin-price span {
+        font-size: 22px; }
+    .coins-container .coin .coin-percent-switch {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 14px;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-bottom: 10px; }
+      .coins-container .coin .coin-percent-switch .coin-percent-btn {
+        width: 40px;
+        height: 15px;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-radius: 7px;
+        background: -webkit-gradient(linear, left top, left bottom, from(#787c7e), to(#c4c4c4));
+        background: linear-gradient(#787c7e, #c4c4c4); }
+        .coins-container .coin .coin-percent-switch .coin-percent-btn::after {
+          content: '';
+          width: 24px;
+          height: 24px;
+          background: url(../img/percent-switch.png);
+          position: absolute;
+          right: 0;
+          -webkit-transition: all .3s ease;
+          transition: all .3s ease; }
+        .coins-container .coin .coin-percent-switch .coin-percent-btn.is-active {
+          background: -webkit-gradient(linear, left top, left bottom, from(#2e7497), to(#3db0ea));
+          background: linear-gradient(#2e7497, #3db0ea); }
+          .coins-container .coin .coin-percent-switch .coin-percent-btn.is-active::after {
+            left: 0; }
+    .coins-container .coin .coin-changes {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 14px; }
+      .coins-container .coin .coin-changes li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .coins-container .coin .coin-changes li span {
+          color: #ffffff; }
+  .coins-container .coin-etherium {
+    background: url(../img/eth-bg.png) no-repeat 50% 0/cover; }
+  .coins-container .coin-litecoin {
+    background: url(../img/ltc-bg.png) no-repeat 50% 0/cover; }
+  .coins-container .coin-bitcoin {
+    background: url(../img/btc-bg.png) no-repeat 50% 0/cover; }

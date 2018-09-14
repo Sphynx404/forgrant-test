@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Coins exchange</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="exchange">
+		<div class="container exchange-container">
+			<h1>Select currency to exhange:</h1>
+			<select name="currency" class="custom-select currency-select">
+				<option selected value="USD">usd</option>
+				<option value="EUR">eur</option>
+				<option value="RUB">rub</option>
+				<option value="GBP">gbp</option>
+			</select>
+		</div>
+	</div>
+	<div class="coins">
+		<div class="container coins-container">
+			<div class="coin coin-etherium" id="ETH">
+				<h2 class="coin-name">Etherium</h2>
+				<h2 class="coin-price">
+					Price: <span>300$</span>
+				</h2>
+				<div class="coin-percent-switch">
+					<h3>Percent change</h3>
+					<button class="coin-percent-btn" data-action="0"></button>
+				</div>
+				<ul class="coin-changes">
+					<li data-change="hour">Hour change <span></span></li>
+					<li data-change="day">Day change <span></span></li>
+					<li data-change="week">Week change <span></span></li>
+					<li data-change="month">Month change <span></span></li>
+				</ul>
+			</div>
+			<div class="coin coin-litecoin" id="LTC">
+				<h2 class="coin-name">Litecoin</h2>
+				<h2 class="coin-price">
+					Price: <span>300$</span>
+				</h2>
+				<div class="coin-percent-switch">
+					<h3>Percent change</h3>
+					<button class="coin-percent-btn" data-action="0"></button>
+				</div>
+				<ul class="coin-changes">
+					<li data-change="hour">Hour change <span></span></li>
+					<li data-change="day">Day change <span></span></li>
+					<li data-change="week">Week change <span></span></li>
+					<li data-change="month">Month change <span></span></li>
+				</ul>
+			</div>
+			<div class="coin coin-bitcoin" id="BTC">
+				<h2 class="coin-name">Bitcoin</h2>
+				<h2 class="coin-price">
+					Price: <span>300$</span>
+				</h2>
+				<div class="coin-percent-switch">
+					<h3>Percent change</h3>
+					<button class="coin-percent-btn" data-action="0"></button>
+				</div>
+				<ul class="coin-changes">
+					<li data-change="hour">Hour change <span></span></li>
+					<li data-change="day">Day change <span></span></li>
+					<li data-change="week">Week change <span></span></li>
+					<li data-change="month">Month change <span></span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
