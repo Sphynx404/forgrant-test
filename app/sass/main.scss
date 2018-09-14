@@ -1,0 +1,249 @@
+@import "reset";
+@import "app/sass/media.scss";
+
+$primaryColor: #ffffff;
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+button {
+	border: 0;
+	background: none;
+	cursor: pointer;
+	outline: 0;
+}
+
+body {
+	font: 16px 'Roboto', sans-serif;
+	background: url(../img/bg.jpg) no-repeat 50% 0 / cover;
+	min-height: 100vh;
+	color: $primaryColor;
+}
+
+.container {
+	width: 984px;
+	margin: 0 auto;
+	position: relative;
+
+	@include mq('tablet-wide') {
+		width: 720px;
+	}
+
+	@include mq('tablet') {
+		width: 610px;
+	}
+	@include mq('tablet-small') {
+		width: 100%;
+	}
+}
+
+.is-rise {
+	color: #70c446 !important;
+}
+
+.is-fall {
+	color: #c80e24 !important;
+}
+
+.exchange {
+	padding-top: 70px;
+	margin-bottom: 50px;
+}
+
+.exchange-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px;
+	background: rgba(#fff, .02);
+	border: 1px solid rgba(#94e8fe, .1);
+	border-radius: 10px;
+	@include mq('phablet') {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	h1 {
+		font-weight: 500;
+		font-size: 32px;
+		text-align: center;
+		flex: 1 0 0;
+		@include mq('phablet') {
+			flex: initial;
+			margin-bottom: 25px;
+		}
+	}
+
+	.custom-select {
+		width: 300px;
+		border: 1px solid #92e8fe;
+		border-radius: 5px;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 300;
+		position: relative;
+		cursor: pointer;
+
+		@include mq('tablet-wide') {
+			width: 200px;
+		}
+
+		.custom-select-trigger {
+			padding: 20px 25px 20px 15px;
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			&::before {
+				content: '';
+				width: 7px;
+				height: 7px;
+				border-bottom: 1px solid #92e8fe;
+				border-right: 1px solid #92e8fe;
+				transform: rotate(45deg);
+				position: absolute;
+				right: 15px;
+			}
+		}
+
+		.custom-options {
+			width: 100%;
+			position: absolute;
+			border: inherit;
+			padding: 20px 15px;
+			border-radius: inherit;
+			left: 0;
+			top: 100%;
+			margin-top: 10px;
+			z-index: 100;
+			background: #1e252b;
+			display: none;
+
+			li.is-selected {
+				display: none;
+			}
+
+			li:hover {
+				font-weight: 700;
+			}
+
+			li+li {
+				margin-top: 10px;
+			}
+		}
+
+		&.is-visible {
+			.custom-options {
+				display: block;
+			}
+		}
+	}
+}
+
+.coins-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	@include mq('tablet') {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.coin {
+		width: 310px;
+		padding: 25px;
+		border-radius: 10px;
+		overflow: hidden;
+		font-weight: 700;
+
+		@include mq('tablet-wide') {
+			width: 230px;
+		}
+		@include mq('tablet') {
+			width: 270px;
+			margin-bottom: 25px;
+		}
+
+		.coin-name {
+			text-align: center;
+			font-size: 22px;
+			margin-bottom: 150px;
+		}
+
+		.coin-price {
+			font-size: 20px;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+
+			span {
+				font-size: 22px;
+			}
+		}
+
+		.coin-percent-switch {
+			display: flex;
+			font-size: 14px;
+			justify-content: space-between;
+			margin-bottom: 10px;
+
+			.coin-percent-btn {
+				width: 40px;
+				height: 15px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				border-radius: 7px;
+				background: linear-gradient(#787c7e, #c4c4c4);
+
+				&::after {
+					content: '';
+					width: 24px;
+					height: 24px;
+					background: url(../img/percent-switch.png);
+					position: absolute;
+					right: 0;
+					transition: all .3s ease;
+				}
+
+				&.is-active {
+					background: linear-gradient(#2e7497, #3db0ea);
+
+					&::after {
+						left: 0;
+					}
+				}
+
+			}
+		}
+
+		.coin-changes {
+			color: rgba($primaryColor, .2);
+			font-size: 14px;
+
+			li {
+				display: flex;
+				justify-content: space-between;
+
+				span {
+					color: $primaryColor;
+				}
+			}
+		}
+	}
+
+	.coin-etherium {
+		background: url(../img/eth-bg.png) no-repeat 50% 0 / cover;
+	}
+
+	.coin-litecoin {
+		background: url(../img/ltc-bg.png) no-repeat 50% 0 / cover;
+	}
+
+	.coin-bitcoin {
+		background: url(../img/btc-bg.png) no-repeat 50% 0 / cover;
+	}
+}
